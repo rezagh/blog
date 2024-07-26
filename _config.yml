@@ -1,1 +1,51 @@
-theme: jekyll-theme-minimal
+title: Your Blog Title
+description: A brief description of your blog.
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://blog.rezag.io" # the base hostname & protocol for your site
+
+theme: minima
+
+# Build settings
+markdown: kramdown
+
+# Minima theme settings
+minima:
+  header:
+    color_theme: "light" # change to "dark" for dark theme
+  social_links: # Add your social media links
+    twitter: your_twitter_handle
+    github: your_github_handle
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Permalinks
+permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+
+# Collections
+collections:
+  my_collection:
+    output: true
+
+# Custom excludes
+exclude:
+  - README.md
+
+# Optional settings
+paginate: 5 # Number of posts per page
+paginate_path: "/page:num/"
+
+# Social media icons
+github_username: your_github_handle
+twitter_username: your_twitter_handle
